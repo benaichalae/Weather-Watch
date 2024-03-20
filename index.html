@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <!-- Setting the viewport to ensure the site is mobile-responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
+    <!-- Linking to external CSS files for header and body styling -->
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="body.css" />
+    <!-- Setting a favicon for the webpage -->
     <link rel="tab icon" href="images/icon.png" type="image/png" />
 </head>
 <body>
     <header>
+        <!-- Site logo and navigation links -->
         <div class="logo-text">Weather</div>
         <p>Watch</p>
         <img src="images/icon.png" alt="logo" />
         <a href="#" id="about">About</a>
-        <a herf="/" id="home">Home Page</a>
+        <!-- Typo in the attribute; should be "href" not "herf" -->
+        <a href="/" id="home">Home Page</a>
     </header>
     <div class="title">
-        <p1>Eliminate the element of surprise from the weather forever,</p1>
+        <!-- Main title and description text -->
+        <p>Eliminate the element of surprise from the weather forever,</p>
         <p>Review the weather forecast prior to your departure.</p>
-        <p3>Accessing the weather based on the city name is simple and convenient.</p3>
+        <p>Accessing the weather based on the city name is simple and convenient.</p>
         <br />
+        <!-- Button to navigate to the weather information page -->
         <button onclick="window.location.href='weather.html'">Weather Watch</button>
     </div>
     <div class="about-text">
-        <p>
-            Welcome to Weather Watch: Your Weather Companion!
-        </p>
+        <!-- Detailed about text and features of the Weather Watch app -->
+        <p>Welcome to Weather Watch: Your Weather Companion!</p>
         <br />
-        <p>
-            Have you ever ventured out, only to be caught off guard by sudden rain showers?
-            Perhaps you left your jacket behind, misled by a seemingly mild forecast, only to be met with a brisk chill.
-            We've all experienced these moments! That's why we developed Weather Watch a user-friendly weather app
-            crafted to keep you in the loop and equipped for any surprises from Mother Nature.
-        </p>
-        <br />
-        <p>
-            At Weather Watch, simplicity reigns supreme. We recognize that not everyone requires intricate meteorological insights.
-            Our app delivers straightforward, concise weather updates, allowing you to effortlessly organize your day.
-            Whether you're glancing for rain before your work commute or scheduling an outdoor adventure, Weather Watch has everything you need.
-        </p>
-        <br />
-        <p>
-            Here's why Weather Watch is the essential app for you:
-        </p>
+        <!-- Continuation of app description -->
+        <p>Have you ever ventured out, only to be caught off guard by sudden rain showers? ...</p>
+        <!-- Listing features -->
         <ul>
-            <li>
-                Simple-to-follow interface:
-                Say goodbye to bewildering jargon or intricate layouts.
-            </li>
-            <li>
-                Current weather updates:
-                Access the most recent forecast tailored to your location.
-            </li>
-            <li>
-                Visual clarity:
-                Simplified icons and graphics ensure effortless comprehension of current weather conditions.
-            </li>
+            <li>Simple-to-follow interface: Say goodbye to bewildering jargon or intricate layouts.</li>
+            <li>Current weather updates: Access the most recent forecast tailored to your location.</li>
+            <li>Visual clarity: Simplified icons and graphics ensure effortless comprehension of current weather conditions.</li>
         </ul>
         <br />
-        <p>
-            Weather Watch empowers you to seize control of your daily schedule and stay primed for any weather eventuality.
-            Say farewell to weather-related surprises and join the Weather Watch community today!
-        </p>
+        <!-- Closing statement and social links -->
+        <p>Weather Watch empowers you to seize control of your daily schedule ...</p>
         <a href="https://github.com/benaichalae">Github</a>
         <a id="a2" href="https://twitter.com/AlaeBenaicha">Twitter</a>
         <a id="a3" href="https://www.linkedin.com/in/alae-ben-aicha-140129187/">Linkedin</a>
     </div>
 <script>
+    // JavaScript for interactive navigation between the About and Home sections
+    // Selecting the About and Home link elements
     const about = document.getElementById("about");
     const aboutText = document.querySelector(".about-text");
     const home = document.getElementById("home");
 
+    // Debugging line to log the About section's text to the console
     console.log(aboutText);
 
+    // Event listener to show the About section and hide the Home/Main title section when the About link is clicked
     about.addEventListener('click', () => {
         aboutText.style.display = "block";
         document.querySelector(".title").style.display = "none";
     })
 
+    // Event listener to hide the About section and show the Home/Main title section when the Home link is clicked
     home.addEventListener('click', () => {
         aboutText.style.display = "none";
         document.querySelector(".title").style.display = "block";
